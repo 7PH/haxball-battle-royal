@@ -52,4 +52,13 @@ export class StadiumManager {
         }
         return closestPosition;
     }
+
+    static getLastLoserStartPosition(goalPosition: [number, number]): [number, number] {
+        const angle = Math.atan2(goalPosition[1], goalPosition[0]);
+        const distance = 50;
+        return [
+            distance * Math.cos(angle),
+            distance * Math.sin(angle),
+        ];
+    }
 }

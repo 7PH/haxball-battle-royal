@@ -27,8 +27,8 @@ export class GameManager {
      * Minimum number of players to start
      */
     public static readonly MIN_PLAYERS: number = 2;
-    public static readonly DEFAULT_LIVES: number = 1;
-    public static readonly PLAYER_JOIN_START_DELAY: number = 10 * 1000;
+    public static readonly DEFAULT_LIVES: number = 3;
+    public static readonly PLAYER_JOIN_START_DELAY: number = 8 * 1000;
 
     private readonly room: Room;
     private state: GameState;
@@ -143,7 +143,7 @@ export class GameManager {
             // If this player was the last one to loose
             let pos: [number, number] = player.position;
             if (player.gameObject === this.state.lastLoser) {
-                pos = [- 40, 0];
+                pos = StadiumManager.getLastLoserStartPosition(player.position);
             } 
             this.room.setPlayerDiscProperties(
                 player.gameObject.id,
