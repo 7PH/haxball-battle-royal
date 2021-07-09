@@ -154,7 +154,7 @@ export interface Room {
     If sound is set to 0 the announcement will produce no sound.
     If sound is set to 1 the announcement will produce a normal chat sound. If set to 2 it will produce a notification sound.
     */
-    sendAnnouncement(msg: string, targetId: number | null, color: number | null, style: string | null, sound: number | null): void;
+    sendAnnouncement(msg: string, targetId?: number | null, color?: number | null, style?: string | null, sound?: number | null): void;
 
     /*
     Sets the room's kick rate limits.
@@ -185,7 +185,7 @@ export interface Room {
     /*
     Same as setDiscProperties but targets the disc belonging to a player with the given Id.
     */
-    setPlayerDiscProperties(playerId: number, properties: DiscPropertiesObject): void;
+    setPlayerDiscProperties(playerId: number, properties: Partial<DiscPropertiesObject>): void;
 
     /*
     Same as getDiscProperties but targets the disc belonging to a player with the given Id.
