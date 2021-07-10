@@ -58,6 +58,8 @@ export class GameManager {
     }
 
     private onPlayerJoin(player: PlayerObject) {
+        this.updateAdmins();
+
         if (this.state.playing) {
             this.room.setPlayerTeam(player.id, 0);
         } else {
@@ -76,8 +78,22 @@ export class GameManager {
         }
     }
 
+    private updateAdmins() {
+        const players = this.room.getPlayerList();
+        if (players.length === 0) {
+            return;
+        }
+        if (players.find((player) => player.admin) !== null) {
+            return;
+        }
+        this.room.setPlayerAdmin(players[0].id, true);
+    }
+
     private onPlayerLeave(gameObject: PlayerObject) {
-        this.state.players = this.state.players.filter(p => p.gameObject !== gameObject);
+        this.updateAdmins();
+
+        // Remove the player that just left
+        this.state.players = this.state.players.filter(p => p.gameObject.id !== gameObject.id);
     }
 
     private onPlayerBallKick(player: PlayerObject) {
