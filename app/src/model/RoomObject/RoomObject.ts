@@ -4,12 +4,16 @@ import { PlayerObject, PlayerPosition } from "../GameObject/PlayerObject";
 import { ScoresObject } from "../GameObject/ScoresObject";
 import { TeamID } from "../GameObject/TeamID";
 
-export interface Room {
-    /*
+
+/*
     IMPLEMENTATION OF HAXBALL HEADLESS HOST SPECIFICATION
     https://github.com/haxball/haxball-issues/wiki/Headless-Host
     RoomObject is the main interface which lets you control the room and listen to it's events
-    */
+
+    @author https://github.com/dapucita/haxbotron (main file)
+    @author https://github.com/7PH (minor fixes)
+*/
+export interface Room {
 
     /*
     Sends a chat message using the host player

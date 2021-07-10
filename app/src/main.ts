@@ -4,7 +4,7 @@ import { GameManager } from "./game/GameManager";
 const TOKEN = "thr1.AAAAAGDojcQLmqjlbuarUw.69ZyLhkWzy4";
 
 const ROOM_CONFIG = {
-    roomName: "❤ Battle Royal - SkyChat",
+    roomName: "👉👉👉 Battle Royal 👈👈👈",
     maxPlayers: 10,
     noPlayer: true,
     public: true,
