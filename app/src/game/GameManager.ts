@@ -26,7 +26,7 @@ export class GameManager {
     /**
      * Minimum number of players to start
      */
-    public static readonly MIN_PLAYERS: number = 2;
+    public static readonly MIN_PLAYERS: number = 3;
     public static readonly DEFAULT_LIVES: number = 3;
     public static readonly PLAYER_JOIN_START_DELAY: number = 8 * 1000;
 
@@ -231,7 +231,7 @@ export class GameManager {
         this.room.pauseGame(true);
         setTimeout(() => {
             this.room.pauseGame(false);
-        }, 500);
+        }, 2500);
     }
 
     private stop() {
