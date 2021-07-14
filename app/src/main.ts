@@ -1,7 +1,7 @@
 import { GameManager } from "./game/GameManager";
 
 
-const TOKEN = "thr1.AAAAAGDojcQLmqjlbuarUw.69ZyLhkWzy4";
+const TOKEN = "thr1.AAAAAGDvacg7x0zPABvaUg.LzGt2N61sRo";
 
 const ROOM_CONFIG = {
     roomName: "👉👉👉 Battle Royal 👈👈👈",
