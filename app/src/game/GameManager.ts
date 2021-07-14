@@ -203,6 +203,11 @@ export class GameManager {
      */
     private start() {
 
+        // Advertise
+        this.room.sendAnnouncement(
+            `Run your own Battle Royal room by visiting: https://github.com/7PH/haxball-battle-royal`
+        );
+
         // Init room
         this.room.setTeamsLock(true);
 
