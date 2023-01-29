@@ -23,6 +23,6 @@ Next time you can just do steps 3 and 4.
 1. Get a token [here](https://www.haxball.com/headlesstoken)
 2. Open [this page](https://html5.haxball.com/headless) in your browser
 3. Open the browser console (F12 on chrome, Ctrl+Shift+J on firefox)
-4. Write `HAXBALL_TOKEN=$YOUR_TOKEN$` in the console and hit enter (replace $YOUR_TOKEN$ with your token)
+4. Write `HAXBALL_TOKEN="$YOUR_TOKEN$"` in the console and hit enter (replace `$YOUR_TOKEN$` with your token)
 4. Copy and paste [this code](https://raw.githubusercontent.com/7PH/haxball-battle-royal/master/dist/bundle.js) in the console and hit enter
 5. That's it! Your battle royal room is running
